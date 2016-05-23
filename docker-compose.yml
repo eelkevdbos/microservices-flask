@@ -1,0 +1,14 @@
+version: "2"
+services:
+  hello:
+    build: ./hello
+    ports: ["5001:5000"]
+  name:
+    build: ./name
+    ports: ["5002:5000"]
+  concat:
+    build: ./concat
+    ports: ["5003:5000"]
+    depends_on:
+      - name
+      - hello
