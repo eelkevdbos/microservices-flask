@@ -32,6 +32,7 @@ Endpoints:
 
 ## Usage
 
+0. Source the virtualenv (python specifics) via `source ./bin/activate`
 1. Boot the containers via: `docker-compose up`
 2. Register a username / password combination via [GET /register/{name}/{password}]
 3. Login to retrieve an access token (JWT) via [POST /login] payload={"username":"myuser","password":"mypass"}
