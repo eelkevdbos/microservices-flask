@@ -3,34 +3,19 @@ Microservices with Flask
 
 Simple demo of microservices with docker and flask
 
-Composed of 3 containers:
-- hello container
-- name container
-- concat container
+Composed of 2 containers:
+- blog
+- manager
+- auth
 
-## Hello container:
+## Blog
 
-A small container that returns a single "hello" response on every GET request to http://hello:5000/
+The blog container lists a collection of blog posts
 
-## Name container:
+## Manager
 
-A small container that returns the first segment in the request URI to http://name:5000/<segment>
+The management container enables a authenticated user to create / edit blog posts
 
-## Concat container:
+## Auth
 
-A small container that calls both the Hello and the Name container in succession. The result is concatted and returned.
-
-## Examples:
-
-Assuming you installed docker + docker-compose locally.
-
-1. Run docker-compose up
-
-2. Execute a request to the concat container using the following url: http://127.0.0.1/eelke-van-den-bos
-
-Will result in the following:
-
-```
-hello eelke-van-den-bos
-```
-
+The authentication container registers and logs in users, providing them an authentication token
